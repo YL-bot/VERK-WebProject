@@ -1,4 +1,4 @@
-import sqlalchemy as sa
+import sqlalchemy as sqla
 import sqlalchemy.orm as orm
 from sqlalchemy.orm import Session
 import sqlalchemy.ext.declarative as dec
@@ -20,10 +20,9 @@ def global_init(db_file):
     conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
     print(f"Подключение к базе данных по адресу {conn_str}")
 
-    engine = sa.create_engine(conn_str, echo=False)
-    __factory = orm.sessionmaker(bind=engine)
+    engine = sqla.create_engine(conn_str, echo=False, pool_pre_ping=True)
 
-    from . import __all_models
+    __factory = orm.sessionmaker(bind=engine)
 
     SqlAlchemyBase.metadata.create_all(engine)
 
