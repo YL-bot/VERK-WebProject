@@ -312,7 +312,7 @@ h3 a {
     background-color: #102040;
     padding: 10px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 
@@ -442,8 +442,125 @@ h3 a {
 
 .linar_collaborator {
     display: flex;
+    width: 420px;
+    margin-top: 10px;
 }
 
 .linar_collaborator img {
     width: 60px;
+}
+
+.linar_collaborator p {
+    margin-left: 10px;
+}
+
+.large_calendar .week {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.large_calendar .week .day {
+    display: grid;
+    background-color: #102040;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    width: 140px;
+    border-color: #1F3359;
+    height: 100px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+.large_calendar .week .day h4 {
+    margin-top: -2px;
+    font-size: 12px;
+}
+
+.large_calendar .week .day .event_pink p {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.large_calendar .week .day .event_pink {
+    background-color: #DE519B;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+.large_calendar .week .day .event_blue p {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.large_calendar .week .day .event_blue {
+    background-color: #7D7BDD;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+.large_calendar .week .day p {
+    font-size: 12px;
+    margin-top: -2px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.events_for_today .event_pink {
+    background-color: #DE519B;
+    border-radius: 10px;
+    padding: 10px;
+    /*display: grid;*/
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.events_for_today .event_blue {
+    background-color: #7D7BDD;
+    border-radius: 10px;
+    padding: 10px;
+    /*display: grid;*/
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.events_for_today p {
+    margin-top: -5px;
+}
+
+.events_for_today h4 {
+    color: #FFF;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.large_calendar .week_header {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.large_calendar .week_header .day h4{
+    text-align: center;
+    font-size: 12px;
+    margin-top: -2px;
+    color: #5C7099;
+}
+
+.large_calendar .week_header .day {
+    display: grid;
+    /*background-color: #102040;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;*/
+    width: 140px;
+    /*border-color: #1F3359;*/
+    height: 15px;
+    margin-right: 5px;
+    padding: 10px;
 }
