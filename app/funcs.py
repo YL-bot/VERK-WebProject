@@ -40,7 +40,7 @@ class RegistrationForm(FlaskForm):
     email = EmailField('Email', validators=[DataRequired()])
     name = StringField('Name', validators=[DataRequired()])
     
-    picture = SelectField('Picture', validators=[DataRequired()], choices=[('1', 'cat'), ('2', 'dog'), ('3', 'cow')])
+    #picture = SelectField('Picture', validators=[DataRequired()], choices=[('1', 'cat'), ('2', 'dog'), ('3', 'cow')])
     
     #сделать потом выбор picture из фозможных вариантов!
     
@@ -69,6 +69,7 @@ def login():
 @app.route('/registration', methods=['GET', 'POST'])
 def registration():
     form = RegistrationForm()
+    db_session = session.create_session()
     
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
@@ -82,11 +83,11 @@ def registration():
             password=form.password.data,
             email=form.email.data,
             name=form.name.data,
-            picture=form.picture.data
+            picture=1
         )   
     
         db_session.add(user)
-        db_session.commit
+        db_session.commit()
     
         return redirect('/login')
     
